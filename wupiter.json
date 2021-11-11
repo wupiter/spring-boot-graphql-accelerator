@@ -22,6 +22,7 @@
         "name": "graphql",
         "type": "file",
         "fileType": "graphql",
+        "description": "Paste your GraphQL schema here",
         "required": true
       },
       {
