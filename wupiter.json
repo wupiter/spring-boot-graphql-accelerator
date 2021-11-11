@@ -38,14 +38,14 @@
       "pathReplacements": [
         { "target":  "demo", "replacement":  "{{appName}}"},
         { "target":  "com/demo", "replacement":  "{{strReplace packageName '.' '/'}}"},
-        { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"}
+        { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"},
         { "target":  "Type.java", "replacement":  "{{@key}}.java"}
       ],
       "textReplacements": [
         { "target":  "demo", "replacement":  "{{appName}}"},
         { "target":  "com.demo", "replacement":  "{{packageName}}"},
         { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"},
-        { "target":  "Type", "replacement":  "{{strReplace @fileName '.java' ''}}"}
+        { "target":  "Type", "replacement":  "{{strReplace @fileName '.java' ''}}"},
         { "target":  "#!#", "replacement":  ""},
         { "target":  "<!--#", "replacement":  ""},
         { "target":  "#-->", "replacement":  ""},
@@ -57,5 +57,4 @@
             "iteratorJsonPath": "graphql.type"
         }
     }
-  }
-  
+}
