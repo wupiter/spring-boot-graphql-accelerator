@@ -1,0 +1,61 @@
+{
+    "name": "Spring Boot GraphQL App Generator",
+    "description": "Code generator that creates a Spring Boot app from a graphql schema.",
+    "tags": [ "java", "Spring Boot", "graphql" ],
+    "params": [
+      {
+        "name": "appName",
+        "type": "text",
+        "defaultValue": "demo",
+        "description": "ie: example-api",
+        "label": "Application Name",
+        "required": true
+      },
+      {
+        "name": "packageName",
+        "type": "text",
+        "defaultValue": "com.demo",
+        "description": "ie: com.example.app",
+        "required": true
+      },
+      {
+        "name": "graphql",
+        "type": "file",
+        "fileType": "graphql",
+        "required": true
+      },
+      {
+        "name": "javaVersion",
+        "type": "select",
+        "values": [
+          8, 9, 11, 16
+        ],
+        "defaultValue": 11,
+        "required": true
+      }
+    ],
+    "preProcessing": {
+      "pathReplacements": [
+        { "target":  "demo", "replacement":  "{{appName}}"},
+        { "target":  "com/demo", "replacement":  "{{strReplace packageName '.' '/'}}"},
+        { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"}
+        { "target":  "Type.java", "replacement":  "{{@key}}.java"}
+      ],
+      "textReplacements": [
+        { "target":  "demo", "replacement":  "{{appName}}"},
+        { "target":  "com.demo", "replacement":  "{{packageName}}"},
+        { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"},
+        { "target":  "Type", "replacement":  "{{strReplace @fileName '.java' ''}}"}
+        { "target":  "#!#", "replacement":  ""},
+        { "target":  "<!--#", "replacement":  ""},
+        { "target":  "#-->", "replacement":  ""},
+        { "target":  "//#", "replacement":  ""}
+      ]
+    },
+    "files": {
+        "demo/src/main/java/com/demo/model/Type.java": {
+            "iteratorJsonPath": "graphql.type"
+        }
+    }
+  }
+  
