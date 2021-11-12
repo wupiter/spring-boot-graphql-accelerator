@@ -1,5 +1,5 @@
 public class Type {
 //#{{#each _item}}
-//#    private {{this.type}} {{@key}};
+//#    private {{#if (eval type '==' 'ID')}}String{{else}}{{this.type}}{{/if}} {{@key}};
 //#{{/each}}
 }
