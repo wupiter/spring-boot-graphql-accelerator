@@ -1,5 +1,5 @@
 public class Type {
-//{{#each @item}}
+//{{#each _item}}
 //    private {{this.type}} {{@key}};
 //{{/each}}
 }
