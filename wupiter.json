@@ -51,7 +51,7 @@
     "files": {
         "demo-app/src/main/java/com/demo/model/Type.java": {
             "iteratorJsonPath": "graphql.type",
-            "nameExpr": "{{@key}}.java",
+            "fileNameExpr": "{{@key}}.java",
             "condition": "@fileName 'notIn' ['Query', 'Mutation', 'Subscription']"
         }
     }
