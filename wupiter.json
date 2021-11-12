@@ -56,7 +56,7 @@
     "files": {
         "demo-app/src/main/java/com/demo/model/Type.java": {
             "iteratorJsonPath": "graphql.type",
-            "condition": "@fileName notIn ['Query', 'Mutation']"
+            "condition": "@fileName notIn ['Query', 'Mutation', 'Subscription']"
         }
     }
 }
