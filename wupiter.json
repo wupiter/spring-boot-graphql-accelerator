@@ -19,6 +19,15 @@
         "required": true
       },
       {
+        "name": "javaVersion",
+        "type": "select",
+        "values": [
+          8, 11, 17
+        ],
+        "defaultValue": 11,
+        "required": true
+      },
+      {
         "name": "idClass",
         "type": "select",
         "defaultValue": "String",
@@ -30,15 +39,6 @@
         "type": "file",
         "fileType": "graphql",
         "description": "Paste your GraphQL schema here",
-        "required": true
-      },
-      {
-        "name": "javaVersion",
-        "type": "select",
-        "values": [
-          8, 11, 17
-        ],
-        "defaultValue": 11,
         "required": true
       }
     ],
