@@ -68,7 +68,7 @@
       "demo-app/src/main/java/com/demo/repository/TypeRepository.java": {
         "iteratorJsonPath": "graphql.json.type",
         "fileNameExpr": "{{@key}}Repository.java",
-        "condition": "_fileName notIn ['Query', 'Mutation', 'Subscription']"
+        "condition": "_fileName notIn ['QueryRepository', 'MutationRepository', 'SubscriptionRepository']"
       }
     }
 }
