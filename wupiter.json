@@ -19,7 +19,7 @@
         "required": true
       },
       {
-        "name": "Class",
+        "name": "idClass",
         "type": "select",
         "defaultValue": "String",
         "values": [ "String", "Integer"  ],
