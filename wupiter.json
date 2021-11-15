@@ -19,11 +19,11 @@
         "required": true
       },
       {
-        "name": "idType",
+        "name": "Class",
         "type": "select",
         "defaultValue": "String",
         "values": [ "String", "Integer"  ],
-        "description": "Java type used for GraphQL ID fields"
+        "description": "Java class used for GraphQL ID fields"
       },
       {
         "name": "graphql",
@@ -52,7 +52,7 @@
         { "target":  "demo-app", "replacement":  "{{appName}}"},
         { "target":  "com.demo", "replacement":  "{{packageName}}"},
         { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"},
-        { "target":  "Type", "replacement":  "{{@fileName}}"},
+        { "target":  "Type", "replacement":  "{{_fileName}}"},
         { "target":  "//#", "replacement":  ""}
       ]
     },
