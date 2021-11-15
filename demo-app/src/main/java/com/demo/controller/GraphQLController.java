@@ -9,7 +9,7 @@ import com.demo.model.*;
 @RequiredArgsConstructor
 public class GraphQLController {
 //#{{#each graphql.json.type}}
-//#{{#if (eval @key 'notIn' ['Query', 'Mutation', 'Subscription'])}}
+//#{{#if (eval @key 'notIn' (array ['Query', 'Mutation', 'Subscription']))}}
 //#    private final {{@key}}Repository {{lowerCase @key}}Repository;
 //#{{/if}}
 //#{{/each}}
