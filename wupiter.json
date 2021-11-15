@@ -57,7 +57,7 @@
       ]
     },
     "files": {
-      ".mvn": {
+      "demo-app/.mvn": {
         "static": "true"
       },
       "demo-app/src/main/java/com/demo/model/Type.java": {
