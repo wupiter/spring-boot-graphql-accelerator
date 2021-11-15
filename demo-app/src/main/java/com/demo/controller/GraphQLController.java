@@ -1,9 +1,8 @@
 package com.demo.controller;
 
+import com.demo.domain.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.graphql.data.method.annotation.QueryMapping;
-import com.demo.model.*;
 
 @Controller
 @RequiredArgsConstructor
