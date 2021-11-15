@@ -57,6 +57,9 @@
       ]
     },
     "files": {
+      ".mvn": {
+        "static": "true"
+      },
       "demo-app/src/main/java/com/demo/model/Type.java": {
         "iteratorJsonPath": "graphql.json.type",
         "fileNameExpr": "{{@key}}.java",
