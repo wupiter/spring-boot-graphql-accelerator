@@ -19,6 +19,13 @@
         "required": true
       },
       {
+        "name": "idType",
+        "type": "select",
+        "defaultValue": "String",
+        "values": [ "String", "Integer"  ],
+        "description": "Java type used for GraphQL ID fields"
+      },
+      {
         "name": "graphql",
         "type": "file",
         "fileType": "graphql",
@@ -29,7 +36,7 @@
         "name": "javaVersion",
         "type": "select",
         "values": [
-          8, 9, 11, 16
+          8, 11, 17
         ],
         "defaultValue": 11,
         "required": true
@@ -50,10 +57,15 @@
       ]
     },
     "files": {
-        "demo-app/src/main/java/com/demo/model/Type.java": {
-            "iteratorJsonPath": "graphql.type",
-            "fileNameExpr": "{{@key}}.java",
-            "condition": "_fileName notIn ['Query', 'Mutation', 'Subscription']"
-        }
+      "demo-app/src/main/java/com/demo/model/Type.java": {
+        "iteratorJsonPath": "graphql.json.type",
+        "fileNameExpr": "{{@key}}.java",
+        "condition": "_fileName notIn ['Query', 'Mutation', 'Subscription']"
+      },
+      "demo-app/src/main/java/com/demo/repository/TypeRepository.java": {
+        "iteratorJsonPath": "graphql.json.type",
+        "fileNameExpr": "{{@key}}Repository.java",
+        "condition": "_fileName notIn ['Query', 'Mutation', 'Subscription']"
+      }
     }
 }
