@@ -63,12 +63,12 @@
       "demo-app/src/main/java/com/demo/model/Type.java": {
         "iteratorJsonPath": "graphql.json.type",
         "fileNameExpr": "{{@key}}.java",
-        "condition": "_fileName notIn (array 'Query' 'Mutation' 'Subscription')"
+        "condition": "_fileName 'notIn' (array 'Query' 'Mutation' 'Subscription')"
       },
       "demo-app/src/main/java/com/demo/repository/TypeRepository.java": {
         "iteratorJsonPath": "graphql.json.type",
         "fileNameExpr": "{{@key}}Repository.java",
-        "condition": "_fileName notIn (array 'QueryRepository' 'MutationRepository' 'SubscriptionRepository')"
+        "condition": "_fileName 'notIn' (array 'QueryRepository' 'MutationRepository' 'SubscriptionRepository')"
       }
     }
 }
