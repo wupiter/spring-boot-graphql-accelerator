@@ -35,6 +35,14 @@
         "description": "Java class used for GraphQL ID fields"
       },
       {
+        "name": "typeMappings",
+        "required": true,
+        "type": "file",
+        "fileType": "json",
+        "defaultValue": "{\"ID\":\"String\", \"Int\":\"Integer\"}",
+        "description": "GraphQL to Java type mapping in JSON"
+      },
+      {
         "name": "graphql",
         "type": "file",
         "fileType": "graphql",
