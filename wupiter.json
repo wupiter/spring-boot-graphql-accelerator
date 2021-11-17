@@ -60,7 +60,7 @@
       "demo-app/.mvn": {
         "static": true
       },
-      "demo-app/src/main/java/com/demo/model/Type.java": {
+      "demo-app/src/main/java/com/demo/domain/Type.java": {
         "iteratorJsonPath": "graphql.json.type",
         "fileNameExpr": "{{@key}}.java",
         "condition": "_fileName 'notIn' (array 'Query' 'Mutation' 'Subscription')"
