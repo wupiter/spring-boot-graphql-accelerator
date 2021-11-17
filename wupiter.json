@@ -52,6 +52,7 @@
         { "target":  "demo-app", "replacement":  "{{appName}}"},
         { "target":  "com.demo", "replacement":  "{{packageName}}"},
         { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"},
+        { "target":  "TypeRepository", "replacement":  "{{_fileName}}"},
         { "target":  "Type", "replacement":  "{{_fileName}}"},
         { "target":  "//#", "replacement":  ""}
       ]
