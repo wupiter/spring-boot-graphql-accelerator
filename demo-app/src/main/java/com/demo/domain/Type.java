@@ -1,6 +1,7 @@
 package com.demo.domain;
 
 import lombok.Data;
+import javax.persistence.*;
 
 //#@Entity
 @Data
