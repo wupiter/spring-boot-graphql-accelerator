@@ -16,6 +16,6 @@ public class Type {
 //#    @GeneratedValue
 //#{{/if}}
 //#{{/if}}
-//#    private {{#if (eval type '==' 'ID')}}{{../idClass}}{{else}}{{map ../typeMappings.json type}}{{/if}} {{@key}};
+//#    private {{#if (eval type '==' 'ID')}}{{../idClass}}{{else}}{{this.type}}{{/if}} {{@key}};
 //#{{/each}}
 }
