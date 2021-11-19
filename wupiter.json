@@ -39,7 +39,7 @@
         "required": true,
         "type": "file",
         "fileType": "json",
-        "defaultValue": "{\"ID\":\"String\", \"Int\":\"Integer\"}",
+        "defaultValue": "{\"ID\":\"String\", \"Int\":\"Integer\", \"String\":\"String\"}",
         "description": "GraphQL to Java type mapping in JSON"
       },
       {
