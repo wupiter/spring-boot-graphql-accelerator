@@ -17,7 +17,7 @@ public class GraphQLController {
 //#{{#each graphql.json.type.Query}}
 //#    @QueryMapping
 //#    public {{#if (eval this.array '==' true)}}List<{{/if}}{{type}}{{#if (eval this.array '==' true)}}>{{/if}} {{@key}}({{#join args}}@Argument {{map ../../typeMappings.json type}} {{@key}}{{/join}}) {
-//#        return {{lowerCase type}}Repository.findAll();
+//#        return {{lowerCase type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
 //#{{/each}}
 
