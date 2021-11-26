@@ -16,10 +16,11 @@ public class GraphQLController {
 
 //#{{#each graphql.json.properties.Query.properties}}
 //#    @QueryMapping
-//#{{#if (eval properties.return.type '==' 'array')}}
-//#    public List<{{properties.return.items.anyOf[0]['$ref']}}> {{@key}}({{#join properties.arguments.properties}}@Argument {{map ../../typeMappings.json type}} {{@key}}{{/join}}) {
-//#        return {{lowerCase properties.return.items.anyOf[0]['$ref']}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
-//#    }
+//#{{#if (eval this.properties.return.type '==' 'array')}}
+//#{{toJSON this.properties.return.items}}
+//    public List<{{this.properties.return.items.anyOf[0]['$ref']}}> {{@key}}({{#join this.properties.arguments.properties}}@Argument {{map ../../typeMappings.json type}} {{@key}}{{/join}}) {
+//        return {{lowerCase this.properties.return.items.anyOf[0]['$ref']}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
+//    }
 //#{{else}}
 //#    public {{properties.return.type}} {{@key}}({{#join properties.arguments.properties}}@Argument {{map ../../typeMappings.json type}} {{@key}}{{/join}}) {
 //#        return {{lowerCase properties.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
