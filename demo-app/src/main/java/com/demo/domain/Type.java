@@ -4,8 +4,8 @@ import lombok.Data;
 import javax.persistence.*;
 
 //#@Entity
-//#{{{toJSON _item}}}
 //#{{#graphqlType _item _key}}
+//#{{{toJSON this}}}
 @Data
 public class Type {
 //#{{#each fields}}
