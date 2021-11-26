@@ -14,19 +14,23 @@ public class GraphQLController {
 //#{{/if}}
 //#{{/each}}
 
-//#{{#each graphql.json.properties.Query.properties}}{{#graphqlOp this @key}}
-//#{{{toJSON this}}}
+//#{{#each graphql.json.properties.Query.properties}}
+//#{{#graphqlOp this @key}}
 //#    @QueryMapping
 //#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}@Argument {{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
-//#{{/graphqlOp}}{{/each}}
+//#{{/graphqlOp}}
+//#{{/each}}
 //#
 //#{{#each graphql.json.properties.Mutation.properties}}
+//#{{#graphqlOp this @key}}
+//#{{{toJSON this}}}
 //#    @MutationMapping
-//#    public {{#if (eval this.properties.return.type '==' 'array')}}List<{{/if}}{{type}}{{#if (eval this.properties.return.type '==' 'array')}}>{{/if}} {{@key}}({{#join args}}@Argument {{map ../../typeMappings.json type}} {{@key}}{{/join}}) {
-//#        return {{lowerCase type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
+//#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}@Argument {{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
+//#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
+//#{{/graphqlOp}}
 //#{{/each}}
 
 }
