@@ -4,6 +4,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 //#@Entity
+//#{{{toJSON this}}}
 @Data
 public class Type {
 //#{{#each _item}}
