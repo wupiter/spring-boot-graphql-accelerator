@@ -74,7 +74,7 @@
         "condition": "_key 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
       },
       "demo-app/src/main/java/com/demo/repository/GraphqlTypeRepository.java": {
-        "iteratorJsonPath": "graphql.json.type",
+        "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}Repository.java",
         "condition": "_key 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
       }
