@@ -1,6 +1,6 @@
 package com.demo.repository;
 
-import com.demo.domain.Type;
+import com.demo.domain.GraphqlType;
 import javax.persistence.Query;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.repository.CrudRepository;

@@ -5,9 +5,9 @@ import javax.persistence.*;
 
 //#{{#graphqlType _item _key}}
 //#{{{toJSON this}}}
-@Entity
+//@Entity
 @Data
-public class Type {
+public class GraphqlType {
 //#{{#each fields}}
 //#{{#if (eval type '==' 'ID')}}
 //#    @Id
