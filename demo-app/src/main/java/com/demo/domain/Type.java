@@ -3,9 +3,9 @@ package com.demo.domain;
 import lombok.Data;
 import javax.persistence.*;
 
-//#@Entity
 //#{{#graphqlType _item _key}}
 //#{{{toJSON this}}}
+@Entity
 @Data
 public class Type {
 //#{{#each fields}}
