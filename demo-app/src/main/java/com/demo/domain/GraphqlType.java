@@ -4,6 +4,11 @@ import lombok.Data;
 import javax.persistence.*;
 
 //#{{#graphqlType _item _key}}
+//#{{#if (eval _item.enum '==' true)}}
+//#public enum GraphqlType {
+//#    {{#each enumValues}}{{this}}{{/each}}
+//#}
+//#{{else}}
 //#@Entity
 @Data
 public class GraphqlType {
@@ -20,4 +25,5 @@ public class GraphqlType {
 //#    private {{#if (eval type '==' 'ID')}}{{../../idClass}}{{else}}{{type}}{{/if}} {{@key}};
 //#{{/each}}
 }
+//#{{/if}}
 //#{{/graphqlType}}
