@@ -4,7 +4,6 @@ import lombok.Data;
 import javax.persistence.*;
 
 //#{{#graphqlType _item _key}}
-//#{{{toJSON this}}}
 //#@Entity
 @Data
 public class GraphqlType {
@@ -18,7 +17,7 @@ public class GraphqlType {
 //#    @GeneratedValue
 //#{{/if}}
 //#{{/if}}
-//#    private {{#if (eval type '==' 'ID')}}{{../idClass}}{{else}}{{type}}{{/if}} {{@key}};
+//#    private {{#if (eval type '==' 'ID')}}{{../../idClass}}{{else}}{{type}}{{/if}} {{@key}};
 //#{{/each}}
 }
 //#{{/graphqlType}}
