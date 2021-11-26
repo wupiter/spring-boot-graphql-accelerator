@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.repository.CrudRepository;
 
 //#public interface {{_key}}Repository extends CrudRepository<{{_key}}, {{idClass}}> {
-//#{{#each graphql.json.type.Query}}
+//#{{#each graphql.json.properties.Query.properties}}
 //#{{#graphqlOp this @key}}
 //#{{#if (eval type '==' ../_key)}}
 //#    // use query that best maps to the generated method:
@@ -16,7 +16,7 @@ import org.springframework.data.repository.CrudRepository;
 //#{{/graphqlOp}}
 //#{{/each}}
 //#
-//#{{#each graphql.json.type.Mutation}}
+//#{{#each graphql.json.properties.Mutation.properties}}
 //#{{#graphqlOp this @key}}
 //#{{#if (eval type '==' ../_key)}}
 //#    // use query that best maps to the generated method:
