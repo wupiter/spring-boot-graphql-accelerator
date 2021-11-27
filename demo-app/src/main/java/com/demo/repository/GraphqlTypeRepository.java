@@ -8,10 +8,9 @@ import org.springframework.data.repository.CrudRepository;
 //#public interface {{_key}}Repository extends CrudRepository<{{_key}}, {{map typeMappings.json 'ID'}}> {
 //#{{#each graphql.json.properties.Query.properties}}
 //#{{#graphqlOp this @key}}
-//#{{{toJSON this}}}
 //#{{#if (eval type '==' ../_key)}}
 //#    // use JQL query that best maps to below generated method:
-//#    @Query("from {{type}}")
+//#    @Query("from {{return.type}}")
 //#    {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
 //#{{/if}}
 //#{{/graphqlOp}}
@@ -21,7 +20,7 @@ import org.springframework.data.repository.CrudRepository;
 //#{{#graphqlOp this @key}}
 //#{{#if (eval type '==' ../_key)}}
 //#    // use JQL query that best maps to below generated method:
-//#    @Query("from {{type}}")
+//#    @Query("from {{return.type}}")
 //#    @Modifying
 //#    {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
 //#{{/if}}
