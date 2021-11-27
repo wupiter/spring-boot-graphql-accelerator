@@ -4,8 +4,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 //#{{#graphqlType _item _key}}
-//#{{{toJSON this}}}
-//#{{#if (eval _item.enum '==' true)}}
+//#{{#if (eval enum '==' true)}}
 //#public enum GraphqlType {
 //#    {{#each enumValues}}{{this}}{{/each}}
 //#}
