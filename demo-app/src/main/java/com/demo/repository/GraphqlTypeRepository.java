@@ -12,7 +12,7 @@ import org.springframework.data.repository.CrudRepository;
 //#{{#if (eval type '==' ../_key)}}
 //#    // use JQL query that best maps to below generated method:
 //#    @Query("from {{type}}")
-//#    {{#if (eval array '==' true)}}List<{{/if}}{{type}}{{#if (eval this.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
+//#    {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
 //#{{/if}}
 //#{{/graphqlOp}}
 //#{{/each}}
@@ -23,7 +23,7 @@ import org.springframework.data.repository.CrudRepository;
 //#    // use JQL query that best maps to below generated method:
 //#    @Query("from {{type}}")
 //#    @Modifying
-//#    {{#if (eval array '==' true)}}List<{{/if}}{{type}}{{#if (eval this.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
+//#    {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
 //#{{/if}}
 //#{{/graphqlOp}}
 //#{{/each}}
