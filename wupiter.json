@@ -28,13 +28,6 @@
         "required": true
       },
       {
-        "name": "idClass",
-        "type": "select",
-        "defaultValue": "String",
-        "values": [ "String", "Integer"  ],
-        "description": "Java class used for GraphQL ID fields"
-      },
-      {
         "name": "typeMappings",
         "required": true,
         "type": "file",
