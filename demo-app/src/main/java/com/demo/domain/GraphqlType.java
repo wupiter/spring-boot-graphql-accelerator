@@ -6,7 +6,7 @@ import javax.persistence.*;
 //#{{#graphqlType _item _key}}
 //#{{#if (eval enum '==' true)}}
 //#public enum GraphqlType {
-//#    {{#each enumValues}}{{this}}{{/each}}
+//#    {{#join enumValues}}{{this}}{{/join}}
 //#}
 //#{{else}}
 //#@Entity
