@@ -15,14 +15,14 @@ public class GraphqlType {
 //#{{#each fields}}
 //#{{#if (eval type '==' 'ID')}}
 //#    @Id
-//#{{#if (eval ../../idClass '==' 'String')}}
+//#{{#if (eval (map ../../typeMappings.json type) '==' 'String')}}
 //#    @GeneratedValue(generator = "uuid")
 //#    @GenericGenerator(name = "uuid", strategy = "uuid2")
 //#{{else}}
 //#    @GeneratedValue
 //#{{/if}}
 //#{{/if}}
-//#    private {{#if (eval type '==' 'ID')}}{{../../idClass}}{{else}}{{type}}{{/if}} {{@key}};
+//#    private {{map ../../typeMappings.json type}} {{@key}};
 //#{{/each}}
 }
 //#{{/if}}

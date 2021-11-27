@@ -5,7 +5,7 @@ import javax.persistence.Query;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.repository.CrudRepository;
 
-//#public interface {{_key}}Repository extends CrudRepository<{{_key}}, {{idClass}}> {
+//#public interface {{_key}}Repository extends CrudRepository<{{_key}}, {{map ../../typeMappings.json 'ID'}}> {
 //#{{#each graphql.json.properties.Query.properties}}
 //#{{#graphqlOp this @key}}
 //#{{#if (eval type '==' ../_key)}}
