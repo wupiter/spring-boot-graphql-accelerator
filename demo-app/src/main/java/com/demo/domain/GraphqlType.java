@@ -27,11 +27,7 @@ import org.hibernate.annotations.GenericGenerator;
 //#{{/if}}
 //{{{toJSON this}}}
 //[{{map ../../typeMappings.json type}}]
-//#{{#if (eval (map ../../typeMappings.json type) '!=' '')}}
-//#    private {{map ../../typeMappings.json type}} {{@key}};
-//#{{else}}
-//#    private {{#if (eval array '==' true)}}List<{{/if}}{{type}}{{#if (eval array '==' true)}}>{{/if}} {{@key}};
-//#{{/if}}
+//#    private {{#if (eval array '==' true)}}List<{{/if}}{{#if (map ../../typeMappings.json type)}}{{map ../../typeMappings.json type}}{{else}}{{type}}{{/if}}{{#if (eval array '==' true)}}>{{/if}} {{@key}};
 //#{{/each}}
 //#}
 //#{{/if}}
