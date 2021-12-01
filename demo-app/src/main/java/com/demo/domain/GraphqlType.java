@@ -1,6 +1,7 @@
 package com.demo.domain;
 
 import lombok.Data;
+import java.util.List;
 import javax.persistence.*;
 //#{{#if (eval (map typeMappings.json 'ID') '==' 'String')}}
 import org.hibernate.annotations.GenericGenerator;
