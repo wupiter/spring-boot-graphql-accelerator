@@ -2,6 +2,9 @@ package com.demo.domain;
 
 import lombok.Data;
 import javax.persistence.*;
+//#{{#if (eval (map typeMappings.json 'ID') '==' 'String')}}
+import org.hibernate.annotations.GenericGenerator;
+//#{{/if}}
 
 //#{{#graphqlType _item _key}}
 //#{{#if (eval enum '==' true)}}
@@ -10,8 +13,8 @@ import javax.persistence.*;
 //#}
 //#{{else}}
 //#@Entity
-@Data
-public class GraphqlType {
+//#@Data
+//#public class {{name}} {
 //#{{#each fields}}
 //#{{#if (eval type '==' 'ID')}}
 //#    @Id
@@ -24,6 +27,6 @@ public class GraphqlType {
 //#{{/if}}
 //#    private {{map ../../typeMappings.json type}} {{@key}};
 //#{{/each}}
-}
+//#}
 //#{{/if}}
 //#{{/graphqlType}}
