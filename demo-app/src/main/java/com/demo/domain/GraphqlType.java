@@ -25,7 +25,11 @@ import org.hibernate.annotations.GenericGenerator;
 //#    @GeneratedValue
 //#{{/if}}
 //#{{/if}}
+//#{{#if (eval (map ../../typeMappings.json type) '!=' '')}}
 //#    private {{map ../../typeMappings.json type}} {{@key}};
+//#{{else}}
+//#    private {{#if (eval array '==' true)}}List<{{/if}}{{type}}{{#if (eval array '==' true)}}>{{/if}} {{@key}};
+//#{{/if}}
 //#{{/each}}
 //#}
 //#{{/if}}
