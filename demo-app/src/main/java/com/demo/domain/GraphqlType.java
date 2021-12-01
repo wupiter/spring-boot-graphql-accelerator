@@ -7,7 +7,6 @@ import org.hibernate.annotations.GenericGenerator;
 //#{{/if}}
 
 //#{{#graphqlType _item _key}}
-//#{{{toJSON this}}}
 //#{{#if (eval enum '==' true)}}
 //#public enum GraphqlType {
 //#    {{#join enumValues}}{{this}}{{/join}}
@@ -26,6 +25,8 @@ import org.hibernate.annotations.GenericGenerator;
 //#    @GeneratedValue
 //#{{/if}}
 //#{{/if}}
+//{{{toJSON this}}}
+//[{{map ../../typeMappings.json type}}]
 //#{{#if (eval (map ../../typeMappings.json type) '!=' '')}}
 //#    private {{map ../../typeMappings.json type}} {{@key}};
 //#{{else}}
