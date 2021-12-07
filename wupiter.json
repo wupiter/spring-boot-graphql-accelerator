@@ -30,7 +30,9 @@
       {
         "name": "typeMappings",
         "required": true,
-        "type": "hidden",
+        "type": "file",
+        "fileType": "json",
+        "hidden": true,
         "defaultValue": "{\"ID\":\"String\", \"Int\":\"Integer\", \"String\":\"String\"}",
         "description": "GraphQL to Java type mapping in JSON"
       },
