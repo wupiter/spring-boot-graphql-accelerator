@@ -30,9 +30,10 @@ import org.hibernate.annotations.GenericGenerator;
 //#    @OneToMany
 //#{{/if}}
 //{{map ../../../typeMappings.json type}}
-//1{{{../typeMappings.json}}}
-//2{{{../../typeMappings.json}}}
-//3{{{../../../typeMappings.json}}}
+//{{toJSON this}}
+//1{{{toJSON ../typeMappings.json}}}
+//2{{{toJSON ../../typeMappings.json}}}
+//3{{{toJSON ../../../typeMappings.json}}}
 //#    private {{#if (eval array '==' true)}}List<{{/if}}{{#if (map ../../typeMappings.json type)}}{{map ../../typeMappings.json type}}{{else}}{{type}}{{/if}}{{#if (eval array '==' true)}}>{{/if}} {{@key}};
 //#{{/each}}
 //#}
