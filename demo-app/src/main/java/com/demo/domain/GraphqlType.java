@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 //#{{/if}}
 
-//a{{toJSON this}}
+//a{{{toJSON this}}}
 //#{{#graphqlType _item _key}}
 //#{{#if (eval enum '==' true)}}
 //#public enum GraphqlType {
@@ -17,7 +17,7 @@ import org.hibernate.annotations.GenericGenerator;
 //#@Entity
 //#@Data
 //#public class {{name}} {
-//b{{toJSON this}}
+//b{{{toJSON this}}}
 //#{{#each fields}}
 //#{{#if (eval type '==' 'ID')}}
 //#    @Id
@@ -32,7 +32,7 @@ import org.hibernate.annotations.GenericGenerator;
 //#    @OneToMany
 //#{{/if}}
 //{{map ../../../typeMappings.json type}}
-//b{{toJSON this}}
+//c{{{toJSON this}}}
 //1{{{toJSON ../typeMappings.json}}}
 //2{{{toJSON ../../typeMappings.json}}}
 //3{{{toJSON ../../../typeMappings.json}}}
