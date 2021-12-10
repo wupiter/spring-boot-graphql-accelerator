@@ -3,11 +3,13 @@ package com.demo.service;
 import com.demo.domain.*;
 import com.demo.repository.*;
 import java.util.List;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service
+@RequiredArgsConstructor
 public class GraphqlTypeService {
 //#{{#each graphql.json.definitions}}
 //#{{#if (eval @key 'notIn' (array 'String' 'Boolean' 'Int' 'ID'))}}
