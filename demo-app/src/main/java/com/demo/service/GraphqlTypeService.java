@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Service
 public class GraphqlTypeService {
-//#{{#each ../graphql.json.definitions}}
+//#{{#each graphql.json.definitions}}
 //#{{#if (eval @key 'notIn' (array 'String' 'Boolean' 'Int' 'ID'))}}
 //#    private final {{@key}}Repository {{lowerCase @key}}Repository;
 //#{{/if}}
@@ -29,7 +29,7 @@ public class GraphqlTypeService {
 //#{{#each graphql.json.properties.Mutation.properties}}
 //#{{#graphqlOp this @key}}
 //#{{#if (eval type '==' ../_key)}}
-//#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}@Argument {{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
+//#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
 //#{{/if}}
