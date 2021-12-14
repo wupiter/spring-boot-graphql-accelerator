@@ -20,7 +20,7 @@ public class GraphQLController {
 //#{{#graphqlOp this @key}}
 //#    @QueryMapping
 //#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}@Argument {{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
-//#        return ResponseEntity.ok({{lowerCase this.return.type}}Service.{{@key}}({{#join args}}{{@key}}{{/join}}));
+//#        return {{lowerCase this.return.type}}Service.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
 //#
 //#{{/graphqlOp}}
@@ -29,7 +29,7 @@ public class GraphQLController {
 //#{{#graphqlOp this @key}}
 //#    @MutationMapping
 //#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}@Argument {{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
-//#        return ResponseEntity.ok({{lowerCase this.return.type}}Service.{{@key}}({{#join args}}{{@key}}{{/join}}));
+//#        return {{lowerCase this.return.type}}Service.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
 //#
 //#{{/graphqlOp}}
