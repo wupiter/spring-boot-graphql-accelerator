@@ -7,12 +7,12 @@ type Tweet {
     # The tweet text. No more than 140 characters!
     body: String
     # When the tweet was published
-    date: Date
+    createdAt: DateTime
     # Who published the tweet
     author: String
 }
 
-scalar Date
+scalar DateTime
 
 type Query {
     Tweet(id: ID!): Tweet
