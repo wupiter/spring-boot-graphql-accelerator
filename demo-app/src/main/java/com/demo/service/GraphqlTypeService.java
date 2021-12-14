@@ -19,7 +19,7 @@ public class GraphqlTypeService {
 
 //#{{#each graphql.json.properties.Query.properties}}
 //#{{#graphqlOp this @key}}
-//#{{#if (eval type '==' ../_key)}}
+//#{{#if (eval return.type '==' ../_key)}}
 //#    @Transactional(readOnly = true)
 //#    public {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
@@ -30,7 +30,7 @@ public class GraphqlTypeService {
 //#
 //#{{#each graphql.json.properties.Mutation.properties}}
 //#{{#graphqlOp this @key}}
-//#{{#if (eval type '==' ../_key)}}
+//#{{#if (eval return.type '==' ../_key)}}
 //#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
