@@ -6,7 +6,6 @@ import javax.persistence.*;
 //#{{#if (eval (map typeMappings.json 'ID') '==' 'String')}}
 import org.hibernate.annotations.GenericGenerator;
 //#{{/if}}
-//#{{{toJSON _item}}}
 //#{{#graphqlType _item _key}}
 //#{{#if (eval enum '==' true)}}
 //#public enum GraphqlType {
