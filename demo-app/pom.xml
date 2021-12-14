@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.demo</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>demo-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
+	<name>demo-app</name>
 	<description> Spring Boot GraphQL project</description>
 	<properties>
 		<java.version>11</java.version>
