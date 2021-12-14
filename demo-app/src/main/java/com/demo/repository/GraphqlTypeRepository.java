@@ -13,10 +13,10 @@ import org.springframework.data.repository.CrudRepository;
 //#    // use JQL query that best maps to below generated method:
 //#    @Query("from {{return.type}}")
 //#    {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
+//#
 //#{{/if}}
 //#{{/graphqlOp}}
 //#{{/each}}
-//#
 //#{{#each graphql.json.properties.Mutation.properties}}
 //#{{#graphqlOp this @key}}
 //#{{#if (eval return.type '==' ../_key)}}
@@ -24,6 +24,7 @@ import org.springframework.data.repository.CrudRepository;
 //#    @Query("from {{return.type}}")
 //#    @Modifying
 //#    {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}});
+//#
 //#{{/if}}
 //#{{/graphqlOp}}
 //#{{/each}}

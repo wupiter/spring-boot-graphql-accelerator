@@ -24,16 +24,17 @@ public class GraphqlTypeService {
 //#    public {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
+//#
 //#{{/if}}
 //#{{/graphqlOp}}
 //#{{/each}}
-//#
 //#{{#each graphql.json.properties.Mutation.properties}}
 //#{{#graphqlOp this @key}}
 //#{{#if (eval return.type '==' ../_key)}}
 //#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
+//#
 //#{{/if}}
 //#{{/graphqlOp}}
 //#{{/each}}
