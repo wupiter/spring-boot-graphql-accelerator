@@ -15,8 +15,8 @@ type Tweet {
 scalar DateTime
 
 type Query {
-    Tweet(id: ID!): Tweet
-    Tweets(limit: Int, skip: Int, sort_field: String, sort_order: String): [Tweet]
+    findTweetById(id: ID!): Tweet
+    listTweets(limit: Int, skip: Int, sort_field: String, sort_order: String): [Tweet]
 }
 
 type Mutation {
