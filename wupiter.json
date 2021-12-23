@@ -1,6 +1,6 @@
 {
     "name": "Spring Boot GraphQL App Generator",
-    "description": "Code generator that creates a Spring Boot app from a graphql schema.",
+    "description": "Code generator that creates a Spring Boot app from a GraphQL schema.",
     "tags": [ "java", "Spring Boot", "graphql" ],
     "params": [
       {
@@ -41,6 +41,7 @@
         "type": "file",
         "fileType": "graphql",
         "description": "Paste your GraphQL schema here",
+        "defaultValue": "type Tweet {\n    id: ID!\n    # The tweet text. No more than 140 characters!\n    body: String\n    # When the tweet was published\n    createdAt: DateTime\n    # Who published the tweet\n    author: String\n}\n\nscalar DateTime\n\ntype Query {\n    findTweetById(id: ID!): Tweet\n    listTweets(limit: Int, skip: Int, sort_field: String, sort_order: String): [Tweet]\n}\n\ntype Mutation {\n    createTweet (\n        body: String\n    ): Tweet\n}\n",
         "required": true
       }
     ],
