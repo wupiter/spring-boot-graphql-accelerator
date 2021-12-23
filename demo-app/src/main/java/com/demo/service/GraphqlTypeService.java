@@ -22,6 +22,7 @@ public class GraphqlTypeService {
 //#{{#if (eval return.type '==' ../../_key)}}
 //#    @Transactional(readOnly = true)
 //#    public {{#if (eval return.array '==' true)}}List<{{/if}}{{return.type}}{{#if (eval return.array '==' true)}}>{{/if}} {{@key}}({{#join args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
+//#        // You may need to replace generated code with correct business logic:  
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
 //#
@@ -32,6 +33,7 @@ public class GraphqlTypeService {
 //#{{#graphqlOp this @key}}
 //#{{#if (eval return.type '==' ../../_key)}}
 //#    public {{#if (eval this.return.array '==' true)}}List<{{/if}}{{this.return.type}}{{#if (eval this.return.array '==' true)}}>{{/if}} {{this.name}}({{#join this.args}}{{map ../../../typeMappings.json type}} {{@key}}{{/join}}) {
+//#        // You may need to replace generated code with correct business logic:  
 //#        return {{lowerCase this.return.type}}Repository.{{@key}}({{#join args}}{{@key}}{{/join}});
 //#    }
 //#
