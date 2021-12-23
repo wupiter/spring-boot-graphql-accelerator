@@ -12,6 +12,7 @@ public class GraphQLConfig {
         return (wiringBuilder) -> wiringBuilder
                 .scalar(DateScalar.INSTANCE)
                 .scalar(DateTimeScalar.INSTANCE)
+                // configure additional custom scalars here
         ;
     }
 }
