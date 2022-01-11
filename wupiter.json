@@ -72,17 +72,17 @@
       "demo-app/src/main/java/com/demo/domain/GraphqlType.java": {
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}.java",
-        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
+        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID' 'DateTime')"
       },
       "demo-app/src/main/java/com/demo/repository/GraphqlTypeRepository.java": {
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}Repository.java",
-        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
+        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID' 'DateTime')"
       },
       "demo-app/src/main/java/com/demo/service/GraphqlTypeService.java": {
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}Service.java",
-        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
+        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID' 'DateTime')"
       }
     }
 }
