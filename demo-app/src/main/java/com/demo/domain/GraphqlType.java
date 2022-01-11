@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 //#{{/if}}
 
-//#{{#graphqlType _item _key}}
+//#{{#graphqlType _item @key}}
 //#{{#if (eval enum '==' true)}}
 //#public enum GraphqlType {
 //#    {{#join enumValues}}{{this}}{{/join}}
