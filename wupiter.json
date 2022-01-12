@@ -81,7 +81,7 @@
       "demo-app/src/main/java/com/demo/domain/GraphqlType.java": {
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}.java",
-        "condition": "@key 'notIn' graphqlScalars.json"
+        "condition": "@key 'notIn' graphqlScalars"
       },
       "demo-app/src/main/java/com/demo/repository/GraphqlTypeRepository.java": {
         "iteratorJsonPath": "graphql.json.definitions",
