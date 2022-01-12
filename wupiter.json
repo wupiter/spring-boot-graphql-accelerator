@@ -37,6 +37,15 @@
         "description": "GraphQL to Java type mapping in JSON"
       },
       {
+        "name": "graphqlScalars",
+        "required": true,
+        "type": "file",
+        "fileType": "json",
+        "hidden": true,
+        "defaultValue": "[\"String\", \"Boolean\", \"Int\", \"Float\", \"ID\"]",
+        "description": "GraphQL scalars defined by the specification"
+      },
+      {
         "name": "graphql",
         "type": "file",
         "fileType": "graphql",
@@ -72,17 +81,17 @@
       "demo-app/src/main/java/com/demo/domain/GraphqlType.java": {
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}.java",
-        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID' 'DateTime')"
+        "condition": "@key 'notIn' graphqlScalars.json"
       },
       "demo-app/src/main/java/com/demo/repository/GraphqlTypeRepository.java": {
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}Repository.java",
-        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID' 'DateTime')"
+        "condition": "@key 'notIn' graphqlScalars.json"
       },
       "demo-app/src/main/java/com/demo/service/GraphqlTypeService.java": {
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{@key}}Service.java",
-        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID' 'DateTime')"
+        "condition": "@key 'notIn' graphqlScalars.json"
       }
     }
 }
