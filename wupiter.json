@@ -80,7 +80,7 @@
       },
       "demo-app/src/main/java/com/demo/domain/GraphqlType.java": {
         "iteratorJsonPath": "graphql.json.definitions",
-        "fileNameExpr": "{{@key}}.java",
+        "fileNameExpr": "{{_itemKey}}.java",
         "condition": "graphqlScalars.json",
         "condition_": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
       },
