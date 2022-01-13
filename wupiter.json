@@ -64,7 +64,7 @@
         { "target":  "demo-app", "replacement":  "{{appName}}"},
         { "target":  "com.demo", "replacement":  "{{packageName}}"},
         { "target":  "DemoApplication", "replacement":  "{{CamelCase appName}}Application"},
-        { "target":  "GraphqlType", "replacement":  "{{@key}}"},
+        { "target":  "GraphqlType", "replacement":  "{{_itemKey}}"},
         { "target":  "//#", "replacement":  ""}
       ]
     },
