@@ -82,7 +82,7 @@
         "iteratorJsonPath": "graphql.json.definitions",
         "fileNameExpr": "{{_itemKey}}.java",
         "condition_": "_itemKey 'notIn' graphqlScalars.json",
-        "condition": "@key 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
+        "condition": "_itemKey 'notIn' (array 'String' 'Boolean' 'Int' 'ID')"
       },
       "demo-app/src/main/java/com/demo/repository/GraphqlTypeRepository.java": {
         "iteratorJsonPath": "graphql.json.definitions",
