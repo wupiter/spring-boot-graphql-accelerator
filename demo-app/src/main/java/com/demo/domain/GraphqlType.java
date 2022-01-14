@@ -7,7 +7,6 @@ import javax.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 //#{{/if}}
 
-//{{{toJSON graphqlScalars.json}}}
 //#{{#graphqlType _item _itemKey}}
 //#{{#if (eval enum '==' true)}}
 //#public enum GraphqlType {
