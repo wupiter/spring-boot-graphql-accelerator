@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 @RequiredArgsConstructor
 public class GraphQLController {
 //#{{#each graphql.json.definitions}}
-//#{{#if (eval @key 'notIn' (array 'String' 'Boolean' 'Int' 'ID'))}}
+//#{{#if (eval @key 'notIn' ../graphqlScalars.json)}}
 //#    private final {{@key}}Service {{lowerCase @key}}Service;
 //#{{/if}}
 //#{{/each}}
