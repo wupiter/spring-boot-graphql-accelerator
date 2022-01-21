@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class GraphqlTypeService {
 //#{{#each graphql.json.definitions}}
-//#{{#if (eval @key 'notIn' (array 'String' 'Boolean' 'Int' 'ID'))}}
+//#{{#if (eval @key 'notIn' ../graphqlScalars.json)}}
 //#    private final {{@key}}Repository {{lowerCase @key}}Repository;
 //#{{/if}}
 //#{{/each}}
