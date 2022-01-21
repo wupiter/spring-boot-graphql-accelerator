@@ -3,7 +3,7 @@ package com.demo.domain;
 import lombok.*;
 import java.util.*;
 import javax.persistence.*;
-//#{{#if (eval (map typeMappings.json 'ID') '==' 'String')}}
+//#{{#if (eval (mapValue typeMappings.json 'ID') '==' 'String')}}
 import org.hibernate.annotations.GenericGenerator;
 //#{{/if}}
 
@@ -21,7 +21,7 @@ import org.hibernate.annotations.GenericGenerator;
 //#{{#each fields}}
 //#{{#if (eval type '==' 'ID')}}
 //#    @Id
-//#{{#if (eval (map ../../typeMappings.json type) '==' 'String')}}
+//#{{#if (eval (mapValue ../../typeMappings.json type) '==' 'String')}}
 //#    @GeneratedValue(generator = "uuid")
 //#    @GenericGenerator(name = "uuid", strategy = "uuid2")
 //#{{else}}
@@ -31,7 +31,7 @@ import org.hibernate.annotations.GenericGenerator;
 //#{{#if (eval array '==' true)}}
 //#    @OneToMany
 //#{{/if}}
-//#    private {{#if (eval array '==' true)}}List<{{/if}}{{#if (map ../../typeMappings.json type)}}{{mapValue ../../typeMappings.json type}}{{else}}{{type}}{{/if}}{{#if (eval array '==' true)}}>{{/if}} {{@key}};
+//#    private {{#if (eval array '==' true)}}List<{{/if}}{{#if (mapValue ../../typeMappings.json type)}}{{mapValue ../../typeMappings.json type}}{{else}}{{type}}{{/if}}{{#if (eval array '==' true)}}>{{/if}} {{@key}};
 //#{{/each}}
 //#}
 //#{{/if}}
