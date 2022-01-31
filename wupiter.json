@@ -1,25 +1,24 @@
 {
-    "name": "Spring Boot GraphQL App Generator",
-    "description": "Code generator that creates a Spring Boot app from a GraphQL schema.",
-    "tags": [ "java", "Spring Boot", "graphql" ],
-    "params": [
-      {
-        "name": "appName",
+    "info": {
+      "name": "Spring Boot GraphQL App Generator",
+      "description": "Code generator that creates a Spring Boot app from a GraphQL schema.",
+      "tags": [ "java", "Spring Boot", "graphql" ]  
+    },
+    "params": {
+      "appName": {
         "type": "text",
         "defaultValue": "demo",
         "description": "ie: example-api",
         "label": "Application Name",
         "required": true
       },
-      {
-        "name": "packageName",
+      "packageName": {
         "type": "text",
         "defaultValue": "com.demo",
         "description": "ie: com.example.app",
         "required": true
       },
-      {
-        "name": "javaVersion",
+      "javaVersion": {
         "type": "select",
         "values": [
           8, 11, 17
@@ -27,8 +26,7 @@
         "defaultValue": 11,
         "required": true
       },
-      {
-        "name": "typeMappings",
+      "typeMappings": {
         "required": true,
         "type": "file",
         "fileType": "json",
@@ -36,8 +34,7 @@
         "defaultValue": "{\"ID\":\"String\", \"Int\":\"Integer\", \"String\":\"String\"}",
         "description": "GraphQL to Java type mapping in JSON"
       },
-      {
-        "name": "graphqlScalars",
+      "graphqlScalars": {
         "required": true,
         "type": "file",
         "fileType": "json",
@@ -45,15 +42,14 @@
         "defaultValue": "[\"String\", \"Boolean\", \"Int\", \"Float\", \"ID\"]",
         "description": "GraphQL scalars defined by the specification"
       },
-      {
-        "name": "graphql",
+      "graphql": {
         "type": "file",
         "fileType": "graphql",
         "description": "Paste your GraphQL schema here",
         "defaultValue": "type Tweet {\n    id: ID!\n    # The tweet text. No more than 140 characters!\n    body: String\n    # When the tweet was published\n    createdAt: DateTime\n    # Who published the tweet\n    author: String\n}\n\nscalar DateTime\n\ntype Query {\n    findTweetById(id: ID!): Tweet\n    listTweets(limit: Int, skip: Int, sort_field: String, sort_order: String): [Tweet]\n}\n\ntype Mutation {\n    createTweet (\n        body: String\n    ): Tweet\n}\n",
         "required": true
       }
-    ],
+    },
     "preProcessing": {
       "pathReplacements": [
         { "target":  "demo-app", "replacement":  "{{appName}}"},
