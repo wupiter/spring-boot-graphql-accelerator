@@ -39,7 +39,7 @@
         "type": "file",
         "fileType": "json",
         "hidden": true,
-        "defaultValue": "[\"String\", \"Boolean\", \"Int\", \"Float\", \"ID\"]",
+        "defaultValue": "[\"String\", \"Boolean\", \"Int\", \"Float\", \"ID\", \"Date\", \"Url\"]",
         "description": "GraphQL scalars defined by the specification"
       },
       "graphql": {
