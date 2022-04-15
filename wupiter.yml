@@ -1,0 +1,109 @@
+info:
+  name: Spring Boot GraphQL App Generator
+  description: Code generator that creates a Spring Boot app from a GraphQL schema.
+  tags:
+  - java
+  - Spring Boot
+  - graphql
+
+params:
+  appName:
+    required: true
+    type: text
+    defaultValue: demo
+    description: 'ie: example-api'
+    label: Application Name
+  packageName:
+    required: true
+    type: text
+    defaultValue: com.demo
+    description: 'ie: com.example.app'
+  javaVersion:
+    required: true
+    type: select
+    values:
+    - 8
+    - 11
+    - 17
+    defaultValue: 11
+  typeMappings:
+    required: true
+    type: file
+    fileType: json
+    hidden: true
+    description: GraphQL to Java type mapping in JSON
+    defaultValue: '{"ID":"String", "Int":"Integer", "String":"String"}'
+  graphqlScalars:
+    required: true
+    type: file
+    fileType: json
+    hidden: true
+    description: GraphQL scalars defined by the specification
+    defaultValue: '["String", "Boolean", "Int", "Float", "ID", "Date", "Url"]'
+  graphql:
+    required: true
+    type: file
+    fileType: graphql
+    description: Paste your GraphQL schema here
+    defaultValue: |
+      type Tweet {
+          id: ID!
+          # The tweet text. No more than 140 characters!
+          body: String
+          # When the tweet was published
+          createdAt: DateTime
+          # Who published the tweet
+          author: String
+      }
+
+      scalar DateTime
+
+      type Query {
+          findTweetById(id: ID!): Tweet
+          listTweets(limit: Int, skip: Int, sort_field: String, sort_order: String): [Tweet]
+      }
+
+      type Mutation {
+          createTweet (
+              body: String
+          ): Tweet
+      }
+
+preProcessing:
+  pathReplacements:
+  - target: demo-app
+    replacement: "{{appName}}"
+  - target: com/demo
+    replacement: "{{strReplace packageName '.' '/'}}"
+  - target: DemoApplication
+    replacement: "{{CamelCase appName}}Application"
+  textReplacements:
+  - target: demo-app
+    replacement: "{{appName}}"
+  - target: com.demo
+    replacement: "{{packageName}}"
+  - target: DemoApplication
+    replacement: "{{CamelCase appName}}Application"
+  - target: GraphqlType
+    replacement: "{{_itemKey}}"
+  - target: "//#"
+    replacement: ''
+files:
+  demo-app/.mvn:
+    static: true
+  ".gitignore":
+    condition: 'false'
+  README.md:
+    condition: 'false'
+  demo-app/src/main/java/com/demo/domain/GraphqlType.java:
+    iteratorJsonPath: graphql.json.definitions
+    fileNameExpr: "{{_itemKey}}.java"
+    condition: _itemKey 'notIn' graphqlScalars.json
+  demo-app/src/main/java/com/demo/repository/GraphqlTypeRepository.java:
+    iteratorJsonPath: graphql.json.definitions
+    fileNameExpr: "{{_itemKey}}Repository.java"
+    condition: _itemKey 'notIn' graphqlScalars.json
+  demo-app/src/main/java/com/demo/service/GraphqlTypeService.java:
+    iteratorJsonPath: graphql.json.definitions
+    fileNameExpr: "{{_itemKey}}Service.java"
+    condition: _itemKey 'notIn' graphqlScalars.json
